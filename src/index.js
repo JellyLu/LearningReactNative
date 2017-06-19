@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ToDoEdit from './component/todoEdit.js'
+import TodoListItem from './component/todoListItem.js'
 
 class Setup  extends React.Component {
   render() {
-    return (<ToDoEdit />);
+    return (<TodoListItem />);
   }
 }
 

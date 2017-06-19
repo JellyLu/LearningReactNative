@@ -22,6 +22,25 @@ var shareStyles = StyleSheet.create({
     borderColor: '#48BBEC',
     borderWidth: 1,
     borderRadius: 8
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'column'
+  },
+  text: {
+    fontSize: 18,
+    marginLeft: 5,
+    marginTop: 2,
+    color: '#222222'
+  },
+  completed: {
+    color: '#cccccc'
+  },
+  hr: {
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    height: 1,
+    marginLeft: 0,
+    marginRight: 0
   }
 });
 
