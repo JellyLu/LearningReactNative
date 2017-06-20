@@ -25,22 +25,31 @@ var shareStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    padding: 20,
+    marginLeft: 8,
+    marginRight: 8,
+    backgroundColor: '#eeeeee'
   },
   text: {
     fontSize: 18,
     marginLeft: 5,
     marginTop: 2,
-    color: '#222222'
+    color: 'red'
   },
   completed: {
-    color: '#cccccc'
+    color: 'green'
   },
   hr: {
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-    height: 1,
+    backgroundColor: 'rgba(255,255, 255, 0.2)',
+    height: 5,
     marginLeft: 0,
     marginRight: 0
+  },
+  listView: {
+    marginTop: 100
   }
 });
 

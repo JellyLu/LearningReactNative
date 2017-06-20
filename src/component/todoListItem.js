@@ -1,13 +1,12 @@
 'use strict';
 
-var styles = require('../styles/shareStyles');
-import React, { Component } from 'react';
-import {
+const styles = require('../styles/shareStyles');
+const React = require('react');
+const {
   View,
   Text,
   TouchableHighlight
-} from 'react-native';
-
+} = require('react-native');
 
 class TodoListItem extends React.Component{
   render() {

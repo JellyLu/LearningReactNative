@@ -1,19 +1,19 @@
 'use strict';
 
-var styles = require('../styles/shareStyles');
-import React, { Component } from 'react';
-import {
+const styles = require('../styles/shareStyles');
+const React = require('react');
+const {
   Text,
   View,
   TouchableHighlight
-} from 'react-native';
-import t from 'tcomb-form-native';
+} = require('react-native');
+const t = require('tcomb-form-native');
 
-var Form = t.form.Form;
+const Form = t.form.Form;
 
-var ToDo = t.struct({Thing: t.Str, Complete: t.Bool});
+const ToDo = t.struct({Thing: t.Str, Complete: t.Bool});
 
-var options = {
+const options = {
   fields: {
     Thing: {
       label: 'Add ToDo',
