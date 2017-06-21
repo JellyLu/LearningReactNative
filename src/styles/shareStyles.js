@@ -14,7 +14,6 @@ var shareStyles = StyleSheet.create({
   },
   button: {
     height: 36,
-    width: 100,
     backgroundColor: '#48BBEC',
     justifyContent: 'center'
   },
@@ -50,6 +49,9 @@ var shareStyles = StyleSheet.create({
   },
   listView: {
     marginTop: 100
+  },
+  navigator: {
+    flex: 1
   }
 });
 

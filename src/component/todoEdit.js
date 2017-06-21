@@ -11,11 +11,11 @@ const t = require('tcomb-form-native');
 
 const Form = t.form.Form;
 
-const ToDo = t.struct({Thing: t.Str, Complete: t.Bool});
+const ToDo = t.struct({text: t.Str, complete: t.Bool});
 
 const options = {
   fields: {
-    Thing: {
+    text: {
       label: 'Add ToDo',
       placeholder: 'enter a to do item',
       autoFocus: true

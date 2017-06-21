@@ -1,16 +1,17 @@
-var React = require('react');
-var {Text} = require('react-native');
-var ToDoList = require ('./component/todoList');
+'use strict';
+const React = require('react');
+const {Text, NavigatorIOS} = require('react-native');
+const styles = require('./styles/shareStyles');
+const ToDoListContainer = require ('./component/todoListContainer');
 
 class Setup  extends React.Component {
   render() {
-    var items = [{text: 'Learn react native', complete: false},
-                {text: 'Make a to-do app', complete: true}];
-    return (<ToDoList
-      items={items}
-      onPress={(rowData, rowId) => {alert('press' + rowData + '-' + rowId);}}
-      onLongPress={(rowData, rowId) => {alert('long press'+ rowData + '-' + rowId);}}
-      />);
+    return (
+      <NavigatorIOS
+      style={styles.navigator}
+      initialRoute={{component: ToDoListContainer, title: 'ToDo List - J'}}
+      />
+    );
   }
 }
 
