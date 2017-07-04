@@ -1,8 +1,8 @@
-const {combineReudcers} = require('redux');
+const {combineReducers} = require('redux');
 const todos = require('./todos');
 const visibilityFilter = require('./visibilityFilter');
 
-const todoApp = combineReudcers({
+const todoApp = combineReducers({
   todos,
   visibilityFilter
 });
