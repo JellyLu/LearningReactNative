@@ -18,6 +18,7 @@ var shareStyles = StyleSheet.create({
     justifyContent: 'center'
   },
   saveButton: {
+    marginTop: 60,
     borderColor: '#48BBEC',
     borderWidth: 1,
     borderRadius: 8
@@ -48,7 +49,7 @@ var shareStyles = StyleSheet.create({
     marginRight: 0
   },
   listView: {
-    marginTop: 100
+    marginTop: 20
   },
   navigator: {
     flex: 1
