@@ -7,9 +7,9 @@ function selectTodos(todos, filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos;
     case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(todo => todo.completed);
+      return todos.filter(todo => {return todo.complete});
     case VisibilityFilters.SHOW_ACTIVE:
-      return todos.filter(todo => !todo.completed);
+      return todos.filter(todo => {return !todo.complete});
   }
 }
 
