@@ -11,9 +11,11 @@ const {
 } = require('react-native');
 const ToDoList = require('./todoList');
 const ToDoEdit = require('./todoEdit');
+const Footer = require('./footer');
 const {
   updateTodo,
-  deleteTodo } = require('../actions/actions');
+  deleteTodo,
+  setVisibilityFilter } = require('../actions/actions');
 
 class ToDoListContainer extends React.Component {
   constructor() {
@@ -22,13 +24,14 @@ class ToDoListContainer extends React.Component {
     this.alertMenu = this.alertMenu.bind(this);
     this.updateItem = this.updateItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.updateFilter = this.updateFilter.bind(this);
   }
   deleteItem(rowId) {
     const {dispatch} = this.props;
     dispatch(deleteTodo(rowId));
   }
   updateItem(item, id) {
-    const {dispatch} = this.props
+    const {dispatch} = this.props;
     dispatch(updateTodo(item, id));
     this.props.navigator.pop();
   }
@@ -50,6 +53,10 @@ class ToDoListContainer extends React.Component {
       ]
     );
   }
+  updateFilter(filter) {
+    const {dispatch} = this.props;
+    dispatch(setVisibilityFilter(filter));
+  }
   render() {
     return (
       <View style={{flex:1}}>
@@ -63,21 +70,12 @@ class ToDoListContainer extends React.Component {
         items={this.props.visibleTodos}
         onPress={this.openItem}
         onLongPress={this.alertMenu} />
+        <Footer
+        visibilityFilter={this.props.visibilityFilter}
+        onClick={this.updateFilter} />
       </View>
     );
   }
 }
-
-// ToDoListContainer.propTypes = {
-//   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
-//     text: PropTypes.string.isRequired,
-//     completed: PropTypes.bool.isRequired
-//   }).isRequired).isRequired,
-//   visibilityFilter: PropTypes.oneOf([
-//     'SHOW_ALL',
-//     'SHOW_COMPLETED',
-//     'SHOW_ACTIVE'
-//   ]).isRequired
-// }
 
 module.exports = ToDoListContainer;
