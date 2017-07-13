@@ -2,7 +2,7 @@ var StyleSheet = require('StyleSheet');
 
 var shareStyles = StyleSheet.create({
   todo: {
-    marginTop: 100,
+    marginTop: 64,
     flex: 1,
     padding: 20,
     backgroundColor: 'white'
@@ -13,12 +13,12 @@ var shareStyles = StyleSheet.create({
     alignSelf: 'center'
   },
   button: {
-    height: 36,
+    height: 44,
     backgroundColor: '#48BBEC',
     justifyContent: 'center'
   },
   saveButton: {
-    marginTop: 60,
+    marginTop: 65,
     borderColor: '#48BBEC',
     borderWidth: 1,
     borderRadius: 8
@@ -48,11 +48,25 @@ var shareStyles = StyleSheet.create({
     marginLeft: 0,
     marginRight: 0
   },
-  listView: {
-    marginTop: 20
-  },
   navigator: {
     flex: 1
+  },
+  footer: {
+    height: 44,
+    marginBottom: 50,
+    backgroundColor: '#48BBEC',
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  activeLink: {
+    color: 'white',
+    fontSize: 25
+  },
+  link: {
+    textAlign: 'center',
+    fontSize: 18,
+    color: 'blue'
   }
 });
 
