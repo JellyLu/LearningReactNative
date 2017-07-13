@@ -13,12 +13,12 @@ var shareStyles = StyleSheet.create({
     alignSelf: 'center'
   },
   button: {
-    height: 36,
+    height: 44,
     backgroundColor: '#48BBEC',
     justifyContent: 'center'
   },
   saveButton: {
-    marginTop: 60,
+    marginTop: 65,
     borderColor: '#48BBEC',
     borderWidth: 1,
     borderRadius: 8
@@ -49,10 +49,28 @@ var shareStyles = StyleSheet.create({
     marginRight: 0
   },
   listView: {
-    marginTop: 20
+    marginTop: 10
   },
   navigator: {
     flex: 1
+  },
+  footer: {
+    height: 44,
+    marginBottom: 50,
+    backgroundColor: '#48BBEC',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  filterLink: {
+
+  },
+  activeLink: {
+    color: 'white'
+  },
+  link: {
+    textAlign: 'center',
+    fontSize: 18,
+    color: 'blue'
   }
 });
 
