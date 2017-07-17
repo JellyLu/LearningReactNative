@@ -1,6 +1,6 @@
 const React = require('react');
 const {View, Text} = require('react-native');
-const Title = require('../components/title');
+const Introduce = require('../components/introduce');
 
 class TextExample extends React.Component {
   constructor() {
@@ -10,8 +10,8 @@ class TextExample extends React.Component {
   render() {
     return (
       <View style={this.props.style}>
-      <Title>Text</Title>
-      <Text style={{fontFamily: 'Cochin'}}>
+      <Introduce title='Text' description='A component for displaying text.'/>
+      <Text>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>
           Birds Nest
         </Text>

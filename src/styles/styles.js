@@ -20,9 +20,20 @@ const styles = StyleSheet.create({
   title: {
     height: 44,
     fontSize: 20,
-    textAlign: 'center',
+    paddingLeft: 10,
     lineHeight: 44,
-    backgroundColor: '#eee'
+    color: 'white',
+    backgroundColor: '#05A5D1'
+  },
+  description: {
+    fontSize: 15,
+    backgroundColor: '#eee',
+    padding: 10,
+    paddingBottom: 20
+  },
+  introduce: {
+    marginBottom: 10,
+    fontFamily: 'Cochin'
   }
 });
 

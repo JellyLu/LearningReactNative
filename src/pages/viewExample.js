@@ -1,6 +1,6 @@
 const React = require('react');
 const {View, Text} = require('react-native');
-const Title = require('../components/title');
+const Introduce = require('../components/introduce');
 
 class ViewExample extends React.Component {
   constructor() {
@@ -10,7 +10,7 @@ class ViewExample extends React.Component {
   render() {
     return (
       <View style={this.props.style}>
-        <Title>View</Title>
+        <Introduce title='View' description='The most fundamental component for building a UI.' />
         <View style={{flexDirection: 'row', height: 100, padding: 20}}>
           <View style={{backgroundColor: 'blue', flex: 0.3}} />
           <View style={{backgroundColor: 'red', flex: 0.5}} />
