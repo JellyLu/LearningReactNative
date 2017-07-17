@@ -5,10 +5,11 @@ const {ListView, Text} = require('react-native');
 const styles = require('./styles/styles');
 const ViewExample = require('./pages/viewExample');
 const TextExample = require('./pages/textExample');
+const ImageExample = require('./pages/imageExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
-              //  'Image': ImageExample,
+               'Image': ImageExample,
               //  'TextInput': TextInputExample,
               //  'ScrollView': ScrollViewExample,
               //  'Button': ButtonExample,
