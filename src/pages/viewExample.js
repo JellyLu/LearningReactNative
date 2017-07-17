@@ -15,7 +15,7 @@ class ViewExample extends React.Component {
           <View style={{backgroundColor: 'blue', flex: 0.3}} />
           <View style={{backgroundColor: 'red', flex: 0.5}} />
         </View>
-      </View>
+      </View> 
     );
   }
 }

@@ -19,7 +19,7 @@ class TextExample extends React.Component {
           This is not really a bird nest.
         </Text>
       </Text>
-      </View>
+      </View> 
     );
   }
 }

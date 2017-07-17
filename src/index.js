@@ -9,7 +9,7 @@ const ImageExample = require('./pages/imageExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
-               'Image': ImageExample,
+               'Image': ImageExample, 
               //  'TextInput': TextInputExample,
               //  'ScrollView': ScrollViewExample,
               //  'Button': ButtonExample,
