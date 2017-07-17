@@ -6,11 +6,12 @@ const styles = require('./styles/styles');
 const ViewExample = require('./pages/viewExample');
 const TextExample = require('./pages/textExample');
 const ImageExample = require('./pages/imageExample');
+const TextInputExample = require('./pages/textInputExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
-               'Image': ImageExample, 
-              //  'TextInput': TextInputExample,
+               'Image': ImageExample,
+               'TextInput': TextInputExample,
               //  'ScrollView': ScrollViewExample,
               //  'Button': ButtonExample,
               //  'Picker': PickerExample,
