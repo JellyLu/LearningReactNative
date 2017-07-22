@@ -11,6 +11,7 @@ const ScrollViewExample = require('./pages/scrollViewExample');
 const ButtonExample = require('./pages/buttonExample');
 const PickerExample = require('./pages/pickerExample');
 const SliderExample = require('./pages/sliderExample');
+const SwitchExample = require('./pages/switchExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
@@ -20,7 +21,7 @@ const views = {'View': ViewExample,
                'Button': ButtonExample,
                 'Picker': PickerExample,
                 'Slider': SliderExample,
-              //  'Switch': SwitchExample,
+                'Switch': SwitchExample,
               //  'FlatList': FlatListExample,
               //  'SecondList': SecondListExample
              };
