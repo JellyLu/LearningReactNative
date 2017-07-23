@@ -13,6 +13,7 @@ const PickerExample = require('./pages/pickerExample');
 const SliderExample = require('./pages/sliderExample');
 const SwitchExample = require('./pages/switchExample');
 const FlatListExample = require('./pages/flatListExample');
+const SecondListExample = require('./pages/sectionListExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
@@ -24,7 +25,7 @@ const views = {'View': ViewExample,
                 'Slider': SliderExample,
                 'Switch': SwitchExample,
                 'FlatList': FlatListExample,
-//                'SecondList': SecondListExample
+                'SecondList': SecondListExample
              };
 
 class Setup extends React.Component {
