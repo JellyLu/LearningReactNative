@@ -1,6 +1,6 @@
 const React = require('react');
-const {View, FlatList, Text} = require('react-native');
-const Introduce = require('../components/introduce');
+const {FlatList, Text} = require('react-native');
+const PageContent = require('../components/pageContent');
 
 const dataSource = [
     {title: 'A', key: 'a'},
@@ -11,14 +11,10 @@ const dataSource = [
     {title: 'F', key: 'f'},
 ];
 class FlatListExample extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='FlatList' description='A component for rendering performant scrollable lists.'/>
+      <PageContent pageTitle='FlatList'
+                   pageDescription='A component for rendering performant scrollable lists.'>
         <FlatList
           data={[]}
           ListEmptyComponent={<Text>Empty List</Text>}
@@ -40,7 +36,7 @@ class FlatListExample extends React.Component {
            horizontal={false}
            numColumns={4}
         />
-      </View>
+      </PageContent>
     );
   }
 }

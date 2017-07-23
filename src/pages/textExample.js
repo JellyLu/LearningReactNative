@@ -1,16 +1,12 @@
 const React = require('react');
-const {View, Text} = require('react-native');
-const Introduce = require('../components/introduce');
+const {Text} = require('react-native');
+const PageContent = require('../components/pageContent');
 
 class TextExample extends React.Component {
-  constructor() {
-      super();
-  }
-
   render() {
     return (
-      <View style={this.props.style}>
-      <Introduce title='Text' description='A component for displaying text.'/>
+      <PageContent pageTitle='Text'
+                   pageDescription='A component for displaying text.'>
       <Text>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>
           Birds Nest
@@ -19,7 +15,7 @@ class TextExample extends React.Component {
           This is not really a bird nest.
         </Text>
       </Text>
-      </View> 
+      </PageContent>
     );
   }
 }

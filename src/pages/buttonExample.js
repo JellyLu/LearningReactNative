@@ -1,11 +1,10 @@
 const React = require('react');
 const {
-  View,
   Button,
   TouchableOpacity,
   Image
 } = require('react-native');
-const Introduce = require('../components/introduce');
+const PageContent = require('../components/pageContent');
 const favIcon = require('../images/favicon.png');
 
 class ScrollViewExample extends React.Component {
@@ -19,15 +18,13 @@ class ScrollViewExample extends React.Component {
 
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='Button' description='A basic button component for handling touches that should render nicely on any platform.'/>
-
+      <PageContent pageTitle='Button'
+                   pageDescription='A basic button component for handling touches that should render nicely on any platform.'>
         <Button accessibilityLabel='This is a ok button'
                 onPress={this._onPress}
                 color='#841584'
                 title='OK!'
         />
-
         <Button accessibilityLabel='This is a cancel button'
                 disabled={true}
                 title='Cancel'
@@ -36,7 +33,7 @@ class ScrollViewExample extends React.Component {
         <TouchableOpacity onPress={this._onPress}>
           <Image source={favIcon} />
         </TouchableOpacity>
-      </View>
+      </PageContent>
     );
   }
 }

@@ -1,6 +1,6 @@
 const React = require('react');
-const {View, Slider} = require('react-native');
-const Introduce = require('../components/introduce');
+const {Slider} = require('react-native');
+const PageContent = require('../components/pageContent');
 
 class SliderExample extends React.Component {
   constructor() {
@@ -12,8 +12,8 @@ class SliderExample extends React.Component {
 
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='Slider' description='A component used to select a single value from a range of values.'/>
+      <PageContent pageTitle='Slider'
+                   pageDescription='A component used to select a single value from a range of values.'>
         <Slider maximumTrackTintColor='blue'
                 minimumTrackTintColor='red'
                 maximumValue={100}
@@ -23,7 +23,7 @@ class SliderExample extends React.Component {
                 onValueChange={(value) => console.log(value)}
                 value={this.state.value}
         />
-      </View>
+      </PageContent>
     );
   }
 }

@@ -1,6 +1,10 @@
 const React = require('react');
-const {View, SectionList, Text, ListItem} = require('react-native');
-const Introduce = require('../components/introduce');
+const {
+    SectionList,
+    Text
+} = require('react-native');
+const Title = require('../components/title');
+const PageContent = require('../components/pageContent');
 
 const sectionsone = [
                         {data: [{title: 'A'}, {title: 'B'}], title: 'A to B'},
@@ -25,13 +29,13 @@ class SectionListExample extends React.Component {
   }
 
   renderSectionHeader({section}) {
-    return (<Introduce title={section.title} />);
+    return (<Title>{section.title}</Title>);
   }
 
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='SectionList' description='Like FlatList, but for sectioned lists.'/>
+      <PageContent pageTitle='SectionList'
+                   pageDescription='Like FlatList, but for sectioned lists.'>
         <SectionList
           renderItem={this.renderItem}
           renderSectionHeader={this.renderSectionHeader}
@@ -42,8 +46,7 @@ class SectionListExample extends React.Component {
             sections={sectiontwo}
             renderSectionHeader={this.renderSectionHeader}
         />
-
-      </View>
+      </PageContent>
     );
   }
 }

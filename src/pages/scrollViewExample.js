@@ -1,11 +1,10 @@
 const React = require('react');
 const {
-  View,
   ScrollView,
   Image,
   RefreshControl
 } = require('react-native');
-const Introduce = require('../components/introduce');
+const PageContent = require('../components/pageContent');
 const favIcon = require('../images/favicon.png');
 
 class ScrollViewExample extends React.Component {
@@ -31,8 +30,8 @@ class ScrollViewExample extends React.Component {
 
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='ScrollView' description='Provides a scrolling container that can host multiple components and views.'/>
+      <PageContent pageTitle='ScrollView'
+                   pageDescription='Provides a scrolling container that can host multiple components and views.'>
         <ScrollView style={{height: 30, width: 100, backgroundColor: 'gray', aliginItem: 'center'}}
                     pagingEnabled={true}
                     horizontal={true}
@@ -51,7 +50,7 @@ class ScrollViewExample extends React.Component {
         >
           <Image style={{width: 30, height: 200}} resizeMode='repeat' source={favIcon} />
         </ScrollView>
-      </View>
+      </PageContent>
     );
   }
 }

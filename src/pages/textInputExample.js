@@ -1,6 +1,6 @@
 const React = require('react');
 const {View, TextInput} = require('react-native');
-const Introduce = require('../components/introduce');
+const PageContent = require('../components/pageContent');
 
 class TextInputExample extends React.Component {
   constructor() {
@@ -10,8 +10,8 @@ class TextInputExample extends React.Component {
 
   render() {
     return (
-      <View style={this.props.style}>
-      <Introduce title='TextInput' description='A component for inputting text into the app via a keyboard.'/>
+      <PageContent pageTitle='TextInput'
+                   pageDescription='A component for inputting text into the app via a keyboard.'>
         <View>
           <TextInput
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
@@ -33,7 +33,7 @@ class TextInputExample extends React.Component {
          value={this.state.text}
        />
         </View>
-      </View>
+      </PageContent>
     );
   }
 }

@@ -1,16 +1,13 @@
 const React = require('react');
 const {ScrollView, View, Image} = require('react-native');
-const Introduce = require('../components/introduce');
+const PageContent = require('../components/pageContent');
 const favIcon = require('../images/favicon.png');
-class ImageExample extends React.Component {
-  constructor() {
-      super();
-  }
 
+class ImageExample extends React.Component {
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='Image' description='A component for displaying images.'/>
+      <PageContent pageTitle='Image'
+                   pageDescription='A component for displaying images.'>
         <ScrollView>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
             <Image style={{width: 100, height: 100}}
@@ -54,7 +51,7 @@ class ImageExample extends React.Component {
             />
           </View>
         </ScrollView>
-      </View>
+      </PageContent>
     );
   }
 }

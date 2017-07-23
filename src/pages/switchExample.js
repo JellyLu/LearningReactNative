@@ -1,6 +1,6 @@
 const React = require('react');
-const {View, Switch} = require('react-native');
-const Introduce = require('../components/introduce');
+const {Switch} = require('react-native');
+const PageContent = require('../components/pageContent');
 
 class SwitchExample extends React.Component {
   constructor() {
@@ -12,8 +12,8 @@ class SwitchExample extends React.Component {
 
   render() {
     return (
-      <View style={this.props.style}>
-        <Introduce title='Switch' description='Renders a boolean input.'/>
+      <PageContent pageTitle='Switch'
+                   pageDescription='Renders a boolean input.'>
         <Switch disabled={true}/>
         <Switch onTintColor='lightgreen'
                 tintColor='red'
@@ -21,7 +21,7 @@ class SwitchExample extends React.Component {
                 onValueChange={(value) => this.setState({value})}
                 value={this.state.value}
          />
-      </View>
+      </PageContent>
     );
   }
 }
