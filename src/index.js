@@ -1,7 +1,8 @@
 const React = require('react');
 const _ = require('lodash');
 const {PropTypes} = React;
-const {ListView, Text} = require('react-native');
+const {SectionList, Text} = require('react-native');
+const Title = require('./components/title');
 const styles = require('./styles/styles');
 const ViewExample = require('./pages/viewExample');
 const TextExample = require('./pages/textExample');
@@ -26,30 +27,65 @@ const views = {'View': ViewExample,
                 'Switch': SwitchExample,
                 'FlatList': FlatListExample,
                 'SecondList': SecondListExample
+//                'ActionSheetIOS': ActionSheetIOSExample,
+//                 'AdSupportIOS': AdSupportIOSExample,
+//                 'AlertIOS': AlertIOSExample,
+//                 'DatePickerIOS': DatePickerIOSExample,
+//                 'ImagePickerIOS': ImagePickerIOSExample,
+//                 'NavigatorIOS': NavigatorIOSExample,
+//                 'ProgressViewIOS': ProgressViewIOSExample,
+//                 'PushNotificationIOS': PushNotificationIOSExample,
+//                 'SegmentControlIOS': SegmentControlIOSExample,
+//                 'TabBarIOS': TabBarIOSExample
              };
+
+const BasicComponents = [{view: 'View'}, {view: 'Text'}, {view: 'Image'}, {view: 'TextIput'},
+                         {view: 'ScrollView'}, {view: 'Button'}, {view: 'Picker'}, {view: 'Slider'},
+                         {view: 'Switch'}, {view: 'FlatList'}, {view: 'SecondList'}];
+
+const iOSComponents = [{view: 'ActionSheetIOS'}, {view: 'AdSupportIOS'}, {view: 'AlertIOS'},
+                       {view: 'DatePickerIOS'}, {view: 'ImagePickerIOS'}, {view: 'NavigatorIOS'},
+                       {view: 'ProgressViewIOS'}, {view: 'PushNotificationIOS'}, {view: 'SegementControlIOS'},
+                       {view: 'TabBarIOS'}];
 
 class Setup extends React.Component {
   constructor() {
     super();
-    const dataSource = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: dataSource.cloneWithRows(_.keys(views))
+        dataSource: [
+            {data: BasicComponents, title: 'Basic Components'},
+            {data: [], title: 'iOS Components'}
+        ]
     };
-    this.toView = this.toView.bind(this);
   }
 
-  toView(rowData) {
+  toView(item) {
     this.props.navigator.push({
-     title: rowData,
-     component: views[rowData],
+     title: item,
+     component: views[item],
      passProps: {style: styles.page}
    });
  }
 
+ renderItem({item}) {
+      console.log(item.view)
+     return <Text onPress={() => this.toView(item.view)}
+                  style={styles.row}
+            >
+              {item.view}
+            </Text>;
+ }
+
+ renderSectionHeader({section}) {
+     return (<Title>{section.title}</Title>);
+   }
+
   render() {
     return (
-      <ListView dataSource={this.state.dataSource}
-                renderRow={(rowData) => <Text onPress={() => this.toView(rowData)} style={styles.row}>{rowData}</Text>}
+      <SectionList
+           renderItem={this.renderItem.bind(this)}
+           sections={this.state.dataSource}
+           renderSectionHeader={this.renderSectionHeader}
       />
     );
   }
