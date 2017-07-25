@@ -4,14 +4,16 @@ const {
   TouchableOpacity,
   Image
 } = require('react-native');
+const Introduce = require('../components/introduce');
 const PageContent = require('../components/pageContent');
 const favIcon = require('../images/favicon.png');
 
-class ScrollViewExample extends React.Component {
+class ButtonExample extends React.Component {
   constructor() {
     super();
     this._onPress = this._onPress.bind(this);
   }
+
   _onPress() {
     alert('this is a button');
   }
@@ -20,11 +22,13 @@ class ScrollViewExample extends React.Component {
     return (
       <PageContent pageTitle='Button'
                    pageDescription='A basic button component for handling touches that should render nicely on any platform.'>
+
         <Button accessibilityLabel='This is a ok button'
                 onPress={this._onPress}
                 color='#841584'
                 title='OK!'
         />
+
         <Button accessibilityLabel='This is a cancel button'
                 disabled={true}
                 title='Cancel'
@@ -38,4 +42,4 @@ class ScrollViewExample extends React.Component {
   }
 }
 
-module.exports = ScrollViewExample;
+module.exports = ButtonExample;
