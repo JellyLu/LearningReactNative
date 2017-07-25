@@ -15,6 +15,7 @@ const SliderExample = require('./pages/sliderExample');
 const SwitchExample = require('./pages/switchExample');
 const FlatListExample = require('./pages/flatListExample');
 const SecondListExample = require('./pages/sectionListExample');
+const ActionSheetIOSExample = require('./pages/actionSheetIOSExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
@@ -26,8 +27,8 @@ const views = {'View': ViewExample,
                 'Slider': SliderExample,
                 'Switch': SwitchExample,
                 'FlatList': FlatListExample,
-                'SecondList': SecondListExample
-//                'ActionSheetIOS': ActionSheetIOSExample,
+                'SecondList': SecondListExample,
+                'ActionSheetIOS': ActionSheetIOSExample,
 //                 'AdSupportIOS': AdSupportIOSExample,
 //                 'AlertIOS': AlertIOSExample,
 //                 'DatePickerIOS': DatePickerIOSExample,
@@ -54,7 +55,7 @@ class Setup extends React.Component {
     this.state = {
         dataSource: [
             {data: BasicComponents, title: 'Basic Components'},
-            {data: [], title: 'iOS Components'}
+            {data: iOSComponents, title: 'iOS Components'}
         ]
     };
   }
