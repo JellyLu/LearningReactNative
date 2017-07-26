@@ -16,6 +16,7 @@ const SwitchExample = require('./pages/switchExample');
 const FlatListExample = require('./pages/flatListExample');
 const SecondListExample = require('./pages/sectionListExample');
 const ActionSheetIOSExample = require('./pages/actionSheetIOSExample');
+const AdSupportIOSExample = require('./pages/adSupportIOSExample');
 
 const views = {'View': ViewExample,
                'Text': TextExample,
@@ -29,7 +30,7 @@ const views = {'View': ViewExample,
                 'FlatList': FlatListExample,
                 'SecondList': SecondListExample,
                 'ActionSheetIOS': ActionSheetIOSExample,
-//                 'AdSupportIOS': AdSupportIOSExample,
+                 'AdSupportIOS': AdSupportIOSExample,
 //                 'AlertIOS': AlertIOSExample,
 //                 'DatePickerIOS': DatePickerIOSExample,
 //                 'ImagePickerIOS': ImagePickerIOSExample,
