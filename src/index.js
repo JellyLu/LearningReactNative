@@ -84,6 +84,7 @@ class Setup extends React.Component {
   render() {
     return (
       <SectionList
+           keyExtractor={(item, index) => index}
            renderItem={this.renderItem.bind(this)}
            sections={this.state.dataSource}
            renderSectionHeader={this.renderSectionHeader}
